@@ -6,3 +6,5 @@ For some types of unsupervised learning analyses, machine learning practitioners
 
 For one-off analyses, using your eyeballs and some subjectivity might be fine, but what if you are using these methods as part of a pipeline in an automated process? I came across a very simple and elegant solution to this, which is described by Mu Zhu in this paper. Lots of heuristics exist to solve this but I've found this method to be particularly robust.
 Zhu's idea is to generate the data you would typically generate to identify the elbow/kink. Then, he treats this data as a composite of two different samples, separated by the cutoff he is trying to identify. He loops through all possible cutoffs, in an attempt to find the cutoff that maximizes the profile log-likelihood (using sample means and a pooled SD in the calculations).
+
+See the original paper here: https://www.sciencedirect.com/science/article/abs/pii/S0167947305002343
